@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .miniplayer-container {
+      width: 320px;
+      padding: 10px;
+      background-color: black;
+      color: white;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: 600;
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+    }
+
+    .miniplayer > img {
+      border-radius: 6px;
+      width: 100%;
+      transition: transform .5s ease 0s;
+    }
+
+    .miniplayer span {
+      width: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: red;
+      color: black !important;
+      line-height: 0px;
+      border-radius: 50%;
+      font-size: 15px !important;
+      height: 50px;
+      transition: transform .5s ease 0s;
+    }
+    .close {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      transform: translate(50%, -50%);
+      transition: transform .5s ease 0s;
+    }
+    .open {
+    transform: scale(0);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform .5s ease 0s;
+}
+    .floatingBtn .close {
+      display: none;
+    }
+
+    .floatingBtn .close,
+    .floatingBtn img,
+    .floatingBtn p {
+      display: none;
+      transform: scale(0);
+    }
+    .floatingBtn {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+    border-radius: 50%;
+
+}
+    .floatingBtn .open {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    color: #000;
+}
+  </style>
+
+  <script>
+    window.addEventListener("load", function(){
+    //   const close = document.querySelector('.close');
+    //   const open = document.querySelector('.open');
+          const miniplayer = document.querySelector('.miniplayer-container');
+          const buttons = Array.from(miniplayer.querySelectorAll('span'));
+          buttons.forEach(el => {
+              el.addEventListener('click', handler);
+          })
+          function handler(){
+            if(miniplayer.classList.contains('floatingBtn')){
+                miniplayer.classList.remove('floatingBtn')
+            }
+            else{
+                miniplayer.classList.add('floatingBtn')
+            };
+          }
+        
+    //   open.addEventListener('click', miniplayerHandler);
+
+    //   function miniplayerHandler(){
+    //       miniplayer.classList.add('floatingBtn');
+    //   }
+    });
+
+  </script>
+
+  <body>
+    <main>
+      <div class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim accusamus
+        ex temporibus adipisci mollitia debitis blanditiis ullam provident
+        repellendus, totam minima cum tenetur perferendis possimus asperiores a
+        sit. Sint error voluptatibus nihil dolorem totam nemo, reiciendis esse
+        eveniet itaque ab libero voluptatem hic temporibus ratione voluptates
+        officiis aperiam voluptate in corrupti ut. Distinctio aperiam voluptates
+        in harum? Totam impedit, blanditiis, voluptates dolorum, aperiam
+        perspiciatis sequi provident dolorem ipsa quo cum nemo dolor enim!
+        Temporibus dicta in at? Eveniet cum aliquam, sunt beatae sed vel tenetur
+        quis et ipsam, ea minus nostrum dolore quas numquam! Laborum dicta
+        pariatur, debitis tempora dolorem quibusdam assumenda cumque? Dolorum
+        repellendus provident eaque illum! Reprehenderit excepturi, ea voluptas
+        dolorem odit perspiciatis cupiditate et vero natus at minus expedita sed
+        odio consequatur modi. Non repellat nulla veritatis placeat commodi et
+        id tempore saepe? Libero culpa tempora asperiores earum cupiditate
+        quaerat facilis. Quis rerum quae nesciunt distinctio tenetur quia
+        similique alias. Libero saepe dolore rerum sed delectus itaque
+        accusantium ducimus magnam ex atque distinctio tempore dolor deleniti
+        velit quidem minima architecto quod vitae similique, quis natus impedit
+        sequi! Consequuntur, sunt velit similique eum alias expedita molestiae
+        doloribus ducimus quaerat beatae facere cum dolorem nulla sit dolore ut?
+        Est corrupti reprehenderit praesentium aliquam expedita porro sapiente,
+        asperiores vero veritatis sint ipsum, quas necessitatibus! Molestiae,
+        unde reprehenderit ullam, temporibus voluptate quasi totam tempora autem
+        modi adipisci obcaecati neque vel voluptatibus fuga ipsa aspernatur
+        doloribus eligendi natus, odit corporis nostrum. Ullam hic quod quas,
+        nobis eos nulla dolorum libero similique recusandae officia ut illo
+        natus aut? Eum quam amet in quae nemo earum minus, harum atque officiis,
+        et temporibus quos sint vel cum esse a. Laboriosam nulla atque ex
+        exercitationem quibusdam maxime impedit dolor a est? Neque veritatis
+        nam, commodi, voluptate id amet atque iusto adipisci facilis est dolore
+        dolorum ab iste velit sunt similique nulla ex beatae distinctio, ducimus
+        dicta soluta hic! Explicabo quos possimus natus, optio consequuntur sed
+        aliquam commodi perspiciatis ad maxime distinctio quibusdam amet magnam
+        ullam neque molestiae reiciendis, officiis modi maiores fuga. Natus,
+        blanditiis ea aliquam aperiam odio eligendi ex enim, quidem laudantium
+        qui a. Aspernatur temporibus beatae iure maxime ipsam architecto odio
+        odit cumque consequuntur, nisi aliquid hic cupiditate exercitationem?
+        Adipisci sit fugiat hic dolor aperiam fuga, necessitatibus quia cum, ut
+        accusamus sapiente corrupti repellendus, repellat tempora? Natus,
+        nostrum deserunt rem veritatis tenetur doloribus itaque facilis laborum
+        qui omnis tempora, sit iste dolore in. Omnis, fugit recusandae quod
+        cumque fuga illum totam autem a temporibus ex praesentium. Accusantium,
+        quisquam! Aspernatur, a? Magni iusto dicta pariatur. Ratione doloribus
+        amet inventore necessitatibus aliquid accusantium aspernatur blanditiis
+        perspiciatis quibusdam, quisquam vero quos id nemo quia quae rerum
+        maxime, dolorem deserunt laudantium harum? Assumenda ducimus aspernatur
+        esse iusto incidunt quo fugit recusandae nihil illum rerum in officia
+        quod, laboriosam necessitatibus praesentium corrupti perferendis placeat
+        quasi atque, ex suscipit perspiciatis nam! Iure et nostrum ut corrupti
+        dolores culpa id nemo sed hic, quibusdam accusamus, vel odio distinctio
+        repellat at eveniet quos autem libero debitis reiciendis, ad in?
+        Recusandae praesentium quaerat, modi doloremque quidem inventore illo
+        quo repellat similique officia maiores fuga, voluptate omnis delectus.
+        Similique, nemo necessitatibus. Nostrum doloribus labore neque
+        distinctio numquam, vero id soluta cumque voluptatum quidem sed eum eius
+        obcaecati! Recusandae perferendis cupiditate similique obcaecati
+        laborum, soluta dicta provident? Itaque, dolorum tempore non fuga eos
+        enim consequatur perferendis accusantium. Harum ipsa quod magnam laborum
+        dolore molestias reprehenderit iste blanditiis doloribus dolorem
+        quibusdam consequatur, necessitatibus nulla tempora nam recusandae eaque
+        voluptatum ad illo dolorum perferendis repellat, quae vel ut. Reiciendis
+        accusantium repellendus et laboriosam sit minus quos quidem nihil illum!
+        Neque, iure minima, vel laudantium corporis dolores autem placeat optio
+        magnam, sunt suscipit error vitae repudiandae ea nostrum hic! Eum odio
+        iusto sunt enim sed eveniet, molestias eos voluptatibus consequuntur at!
+        Consectetur quam veritatis quidem nostrum, nisi quis eos totam ipsum
+        reprehenderit debitis quae natus fuga nam consequuntur odio voluptas
+        perspiciatis veniam ipsam accusamus labore laboriosam! Sunt at ad nobis
+        quisquam natus tenetur laborum placeat mollitia magni. Provident, esse
+        cum repudiandae odit consequuntur quasi autem ullam tenetur perspiciatis
+        ducimus totam quod animi dolore, quos fugit iure, facilis earum minus
+        nam itaque. Asperiores vel suscipit provident aspernatur quasi eum
+        iusto, cum laudantium impedit quam officiis perspiciatis quia nesciunt
+        harum recusandae maxime, sed mollitia quod rem ratione dolores aliquid
+        ex deserunt voluptates? Autem rerum numquam alias facere eaque, itaque a
+        perspiciatis voluptate corporis necessitatibus repellendus similique est
+        magni quas, quo dolore accusamus! Libero dolorum sunt obcaecati
+        molestiae delectus autem praesentium culpa explicabo, id veritatis
+        beatae distinctio quibusdam? Sed officia reprehenderit quae quo nisi
+        perferendis reiciendis velit iusto possimus, modi unde quam ad ratione
+        id? Beatae tenetur accusamus debitis impedit. Exercitationem adipisci
+        rem, nisi dignissimos nobis obcaecati esse, voluptatibus ullam mollitia,
+        placeat nulla quae quasi. Est minus dolore, modi ea expedita magnam
+        obcaecati maiores commodi nesciunt eligendi architecto veniam minima
+        adipisci optio ratione consequatur eaque itaque porro hic nemo dolorum
+        necessitatibus? Explicabo nulla quasi possimus excepturi quibusdam
+        deleniti dolorum eius id laudantium. Eius esse dolore eum illum ad hic
+        illo neque fugit voluptatem nostrum nobis rem, commodi dolorum et saepe
+        iusto voluptate, alias, repellendus repudiandae expedita quidem delectus
+        at! Accusamus tenetur quaerat qui nihil sed nostrum deleniti reiciendis
+        voluptas nulla? Nobis enim expedita, minima totam cum blanditiis amet
+        distinctio at sunt harum modi temporibus deleniti? Eligendi iste
+        repudiandae minima tempora. Atque quod cupiditate aut, expedita
+        reiciendis blanditiis, non minus, iusto quo provident distinctio.
+        Debitis provident tempora cumque sed? Iure saepe sed dignissimos esse
+        veniam commodi error culpa! Ipsa nisi distinctio quidem quod dicta nemo
+        voluptas eaque iste maiores dolorem. Hic repudiandae earum nostrum
+        reiciendis eveniet iure nisi ut distinctio assumenda suscipit aperiam
+        similique beatae ducimus autem perferendis nihil, ipsum esse corporis
+        consectetur vero sint laboriosam rerum. Sequi cumque vitae sit. Dolorum
+        reiciendis enim doloribus, maiores blanditiis deleniti, esse, similique
+        minus itaque harum aliquid fugiat in nesciunt quibusdam aperiam
+        doloremque quae voluptatem vitae. Nesciunt recusandae voluptatibus
+        facere animi amet consequuntur nostrum, voluptas officiis tempore quae
+        similique rerum consectetur, sapiente laboriosam eum doloremque vel
+        cupiditate doloribus ratione quo tenetur commodi autem. Inventore,
+        necessitatibus.
+      </div>
+      <div class="miniplayer-container floatingBtn">
+        <div class="miniplayer">
+          <span class="icon open">O</span>
+          <span class="icon close">C</span>
+          <img src="../images/3.jpg" alt="" />
+          <p>This is a button for opening this video</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
