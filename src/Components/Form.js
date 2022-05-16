@@ -1,11 +1,11 @@
 import classes from '../Styles/Form.module.css';
+import { Link } from 'react-router-dom';
 
-export default function Form ({classNames, children}) {
-    console.log(classes);
+export default function Form ({classNames, children, onSubmit}) {
     return (
-        <form class={`${classNames} ${classes.form}`}>
+        <form className={`${classNames} ${classes.form}`} onSubmit={onSubmit}>
             {children}
-        <div class="info">Don't have an account? <a href="signup.html">Signup</a> instead.</div>
+        <div className="info">Don't have an account? <Link to="/signup">Signup</Link> instead.</div>
       </form>
     );
 

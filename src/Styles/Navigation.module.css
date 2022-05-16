@@ -1,5 +1,6 @@
 .nav {
   display: flex;
+  justify-content: space-between;
   background-color: #fff;
   position: fixed;
   left: 0;

@@ -1,9 +1,12 @@
-export default function Checkox({className, id,htmlfor ,label}) {
-    console.log(className)
+import React from "react";
+
+const Checkox = React.forwardRef(({className, id, htmlfor, label, checkHandler, ...rest}, ref) => {
     return (
-        <label htmlFor={htmlfor} className={className}>
-            <input type="checkbox" id={id}/>
+        <label htmlFor={`checkbox${htmlfor}`} className={className} {...rest} ref={ref}>
+            <input type="checkbox" id={`checkbox${id}`} onClick={checkHandler}/>
             <span>{" " + label}</span>
         </label>
     );
-}
+})
+
+export default Checkox;

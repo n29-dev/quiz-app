@@ -1,17 +1,18 @@
 import classes from '../Styles/Video.module.css';
 import thumbnail from '../assets/images/3.jpg'
+import { Link } from 'react-router-dom';
 
-export default function Video() {
+export default function Video({title, noq, videoId}) {
   return (
-    <a href="quiz.html">
+    <Link to={`/quiz/${videoId}`} style={{display: 'inline-block', paddingBottom: '20px'}}>
       <div className={classes.video}>
-        <img src={thumbnail} alt="" />
-        <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
+        <img src={thumbnail} alt={title} />
+        <p>{title}</p>
         <div className={classes.qmeta}>
-          <p>10 Questions</p>
-          <p>Score : Not taken yet</p>
+          <p>{noq} Questions</p>
+          <p>Total Points: {noq * 5}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

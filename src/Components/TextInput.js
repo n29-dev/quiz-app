@@ -1,10 +1,14 @@
+import React from 'react';
 import classes from '../Styles/TextInput.module.css';
 
-export default function TextInput({icon, ...rest}) {
+const TextInput = React.forwardRef(({icon, ...rest}, ref) => {
+
   return (
-    <div class={classes.textInput}>
-      <input {...rest}/>
-      <span class="material-icons-outlined"> {icon} </span>
+    <div className={classes.textInput}>
+      <input {...rest} ref={ref}/>
+      <span className="material-icons-outlined"> {icon} </span>
     </div>
   );
-}
+});
+
+export default TextInput;
